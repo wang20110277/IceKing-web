@@ -74,9 +74,7 @@
             const _this=this;
             axios.get("http://localhost:16801/user/getAllUsers?page=1&size=5")
                 .then(function (response) {
-                    console.log(response)
                     _this.tableData=response.data.list
-                    console.log(response.data.list)
                     _this.pageSize=response.data.pageSize
                     _this.total=response.data.total
                 });
